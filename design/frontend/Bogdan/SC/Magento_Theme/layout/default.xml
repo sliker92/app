@@ -16,16 +16,12 @@
             <block name="header.cart_phone" template="Magento_Theme::header_phone.phtml" after="top.search"/>
             <block name="header_banner" template="Magento_Theme::header_banner.phtml" after="-" />
         </referenceContainer>
+
         <referenceContainer name="main">
-            <block name="banners.section" template="Magento_Theme::banners_section.phtml" after="-" />
             <container name="products.section" htmlTag="section" htmlClass="products_section" as="products_section"
                        label="Products Section" after="-">
                 <block name="categories.block" template="Magento_Theme::categories_block.phtml" after="-"/>
             </container>
-            <block name="about.section" template="Magento_Theme::about_section.phtml" after="-" />
-        </referenceContainer>
-        <referenceContainer name="content">
-            <block name="main_content"  template="Magento_Theme::main_content.phtml" before="-"/>
         </referenceContainer>
 
         <referenceContainer name="page.bottom">
