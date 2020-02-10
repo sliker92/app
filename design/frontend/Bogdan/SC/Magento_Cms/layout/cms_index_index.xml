@@ -3,6 +3,10 @@
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="main">
+            <block class="Bogdan\AdminCMS\Block\Banner" name="main.banner" template="Bogdan_AdminCMS::main_banner.phtml" />
+            <block class="Bogdan\AdminCMS\Block\BackgroundColor" name="banner.color" template="Bogdan_AdminCMS::banner_color.phtml" />
+            <block class="Bogdan\AdminCMS\Block\BackgroundColor" name="about.section.color" template="Bogdan_AdminCMS::about_section_color.phtml" />
+            <block class="Bogdan\AdminCMS\Block\About" name="about.section.image" template="Bogdan_AdminCMS::about_section_image.phtml" />
             <block name="banners.section" template="Magento_Cms::banners_section.phtml" before="products.section" />
             <block name="about.section" template="Magento_Cms::about_section.phtml" after="products.section" />
         </referenceContainer>
