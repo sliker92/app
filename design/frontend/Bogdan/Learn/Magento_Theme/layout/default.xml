@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"        xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="page.top">
+            <block name="free.shipping" template="Magento_Theme::free_shipping.phtml" after="-" />
+        </referenceContainer>
+        <referenceContainer name="content">
+            <block name="main_content"  template="Magento_Theme::main_content.phtml" before="-"/>
+        </referenceContainer>
+        <referenceContainer name="page.bottom.container">
+            <block name="form_subscribe_content" template="Magento_Theme::form_subscribe_content.phtml" before="-" />
+        </referenceContainer>
+        <referenceContainer name="footer">
+            <block name="footer_links_custom" template="Magento_Theme::footer_links_custom.phtml" before="-" />
+            <block name="footer_logo" template="Magento_Theme::footer_logo.phtml" before="-" />
+        </referenceContainer>
+
+        <referenceBlock name="top.links" remove="true"/>
+        <referenceBlock name="footer_links" remove="true"/>
+
+        <move element="form.subscribe" destination="page.bottom" after="-" />
+        <move element="copyright" destination="footer-container" after="-" />
+    </body>
+</page>

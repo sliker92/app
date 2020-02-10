@@ -1,0 +1,16 @@
+<div class="main_banner_wrapper">
+    <div class="main_banner_content">
+        <a class="main_banner_link" href="<?php echo $block->bannerLink(); ?>">
+        <h5 class="main_banner_description"><?php echo $block->bannerDescr(); ?></h5>
+        <h2 class="main_banner_header"><?php echo $block->bannerTitle(); ?></h2>
+        </a>
+    </div>
+</div>
+
+<style type="text/css">
+    .main_banner_wrapper {
+        background: url('<?php echo $block->getBannerImage(); ?>') center bottom no-repeat;
+        background-size: cover;
+    }
+</style>
+

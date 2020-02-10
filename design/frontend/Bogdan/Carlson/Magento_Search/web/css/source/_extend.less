@@ -1,0 +1,28 @@
+& when (@media-common = true) {
+  .block-search  {
+    display: none;
+  }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .block-search {
+        display: inline-block;
+        float: unset;
+        padding-left: 0;
+        width: 35%;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .block-search .action.search:before {
+        color: @color-orange-red4;
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    .block-search {
+        width: 43%;
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+}

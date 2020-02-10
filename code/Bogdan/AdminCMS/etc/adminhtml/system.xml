@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="bogdan" translate="label" sortOrder="1">
+            <label>Bogdan</label>
+        </tab>
+        <section id="banner_section" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Banner</label>
+            <tab>bogdan</tab>
+            <resource>Bogdan_AdminCMS::config</resource>
+            <group id="banner_data" translate="label" sortOrder="10"  showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Banner</label>
+                <field id="banner_description" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Banner Description</label>
+                </field>
+                <field id="banner_title" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Banner Title</label>
+                </field>
+                <field id="banner_image" translate="label comment" type="image" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Banner Image</label>
+                    <comment><![CDATA[Allowed file types: jpeg, gif, png, svg.]]></comment>
+                    <backend_model>Bogdan\AdminCMS\Model\Config\Backend\Image</backend_model>
+                    <base_url type="media" scope_info="1">theme</base_url>
+                    <upload_dir config="system/filesystem/media" scope_info="1">theme</upload_dir>
+                </field>
+                <field id="banner_background" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Banner Background</label>
+                    <frontend_model>Bogdan\AdminCMS\Block\BackgroundColor</frontend_model>
+                </field>
+                <field id="banner_link" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Banner Link</label>
+                </field>
+            </group>
+        </section>
+        <section id="about_section" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>About Section</label>
+            <tab>bogdan</tab>
+            <resource>Bogdan_AdminCMS::config</resource>
+            <group id="about_section_data" translate="label" sortOrder="10"  showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>About Section</label>
+                <field id="banner_background" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>About Section Background</label>
+                    <frontend_model>Bogdan\AdminCMS\Block\BackgroundColor</frontend_model>
+                </field>
+                <field id="banner_background_image" translate="label comment" type="image" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Banner Background Image</label>
+                    <comment><![CDATA[Allowed file types: jpeg, gif, png, svg.]]></comment>
+                    <backend_model>Bogdan\AdminCMS\Model\Config\Backend\Image</backend_model>
+                    <base_url type="media" scope_info="1">theme</base_url>
+                    <upload_dir config="system/filesystem/media" scope_info="1">theme</upload_dir>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

@@ -1,0 +1,86 @@
+& when (@media-common = true) {
+    h2, h5, .columns .column.main {
+        margin: 0;
+        padding: 0;
+    }
+
+    .main_banner_header {
+        font-size: ceil(@font-size__base * 2.6);
+        font-weight: bold;
+    }
+
+    .main_banner_description {
+        font-size: ceil(@font-size__base);
+        font-weight: normal;
+    }
+
+    .main_banner_wrapper {
+        min-height: 70vh;
+        position: relative;
+        width: 100%;
+        margin-bottom: 15rem;
+
+        .main_banner_content {
+            overflow: hidden;
+            width: 90%;
+            height: 125px;
+            margin: auto;
+            position: absolute;
+            bottom: -15%;
+            left: 5%;
+
+            .main_banner_link {
+                display: flex;
+                flex-direction: column;
+                padding-left: 2rem;
+                justify-content: space-evenly;
+                color: @color-white;
+                height: 100%;
+                width: 100%;
+                border-left: 3px solid #d85700;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+    .main_banner_header {
+        font-size: ceil(@font-size__base * 2.8);
+    }
+
+    .main_banner_wrapper {
+        margin-bottom: 2.5rem;
+
+        .main_banner_content {
+            width: 310px;
+            height: 165px;
+            bottom: 15%;
+            left: unset;
+            right: 0;
+            padding: 1rem;
+
+            .main_banner_link {
+                padding-left: 1rem;
+                border-left: none;
+            }
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    .main_banner_description {
+        font-size: ceil(@font-size__base * 1.2);
+    }
+    .main_banner_wrapper {
+        .main_banner_content {
+            width: 520px;
+            height: 155px;
+            bottom: 30%;
+        }
+    }
+}

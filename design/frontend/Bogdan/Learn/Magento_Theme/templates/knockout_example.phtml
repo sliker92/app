@@ -1,0 +1,18 @@
+<script type="text/x-magento-init">
+{
+    "*": {
+            "Magento_Ui/js/core/app":{
+                "components": {
+                    "knockExample": {
+                        "component": "Magento_Theme/js/knockout_example",
+                        "base_url": "<?= $block->escapeJs($block->getBaseUrl()) ?>"
+                    }
+                }
+            }
+    }
+}
+</script>
+
+<div data-bind="scope: 'knockExample'">
+    <h1 data-bind="text: info"></h1>
+</div>

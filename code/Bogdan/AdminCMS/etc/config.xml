@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <banner_section>
+            <banner_data>
+                <banner_description>Simpson 300sg2 Kit Auto Feed Attch</banner_description>
+                <banner_title>Hidden Deck Fastening System</banner_title>
+                <banner_background>#ff6700</banner_background>
+                <banner_link>#</banner_link>
+            </banner_data>
+        </banner_section>
+        <about_section>
+            <about_section_data>
+                <banner_background>#ff6700</banner_background>
+            </about_section_data>
+        </about_section>
+    </default>
+</config>

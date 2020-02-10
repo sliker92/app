@@ -1,0 +1,219 @@
+@import "_main_content.less";
+
+& when (@media-common = true) {
+
+  i {
+    &:before {
+      color: @color-black;
+    }
+  }
+
+  .free_shipping_wrapper {
+    padding: 10px 0;
+    background-color: @color-gray-darken1;
+    text-align: center;
+    margin-bottom: 0;
+
+    .free_shipping_link {
+      padding-left: 2px;
+      color: @color-blue3;
+    }
+  }
+
+  .product-item-details {
+    text-align: center;
+
+    .product-reviews-summary {
+      display: none;
+    }
+  }
+
+  .price-container > .price-label {
+    display: none;
+  }
+
+  .price-box {
+    display: flex;
+    justify-content: center;
+
+    .special-price {
+      margin: 0;
+    }
+  }
+
+  .old-price > .price-container > .price-wrapper > .price {
+    padding-left: 5px;
+    color: @color-orange-red3;
+  }
+
+  .columns .column.main {
+    padding-bottom: 0;
+  }
+
+  .page-bottom {
+    text-align: center;
+    background-color: @color-gray-darken3;
+
+    .form_subscribe_content {
+      display: inline-block;
+      padding: 10px;
+      color: @color-white;
+    }
+  }
+
+  .page-footer {
+    text-align: center;
+
+    .footer_logo_wrapper {
+      max-width: 300px;
+      margin: auto;
+    }
+
+    .footer_links_wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+      .footer_links_block {
+        .accordion_links_header {
+          cursor: pointer;
+          margin: 0;
+          padding: 2.5rem;
+
+          &:hover {
+            color: @color-gray-middle4;
+          }
+        }
+
+        .accordion_closed {
+          &::after {
+            font-family: "Font Awesome 5 Free";
+            content: "\f0dd";
+            display: inline-block;
+            font-weight: 600;
+            transform: translate(5px, -3px);
+          }
+        }
+
+        .accordion_opened {
+          &::after {
+            font-family: "Font Awesome 5 Free";
+            content: "\f0dd";
+            display: inline-block;
+            font-weight: 600;
+            transform: rotate(180deg) translate(-4px, -6px);
+          }
+        }
+
+        .footer_links_list {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+
+    .footer_social_list {
+      display: flex;
+      justify-content: center;
+
+      .footer_social_item:not(:last-child) {
+        padding-right: 3px;
+      }
+    }
+
+
+    .copyright {
+      display: block;
+      background-color: @color-gray-darken3;
+      color: @color-white;
+      text-align: center;
+      padding: 9px 0;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+    }
+  }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  .navigation, .breadcrumbs, .page-header .header.panel, .header.content, .footer.content, .page-wrapper > .widget, .page-wrapper > .page-bottom, .free_shipping_wrapper {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .free_shipping_wrapper {
+    margin-bottom: 0rem;
+  }
+
+  .block.newsletter, .block {
+    margin: auto;
+    width: 100%;
+  }
+
+  .sections {
+    margin: 0;
+  }
+
+  .page-bottom {
+    width: 100%;
+
+    .content {
+      display: inline-flex;
+      width: 100%;
+
+      .newsletter {
+        width: 100%;
+      }
+    }
+  }
+
+  .page-bottom > .content {
+    padding: 25px 0;
+    width: 40%;
+  }
+
+  .page-footer {
+    .footer_logo_wrapper {
+      display: inline-block;
+      float: left;
+      margin-top: 3rem;
+    }
+
+    .footer_links_wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+      .footer_links_block {
+        .accordion_links_header {
+          cursor: default;
+
+          &:hover {
+            color: @text__color;
+          }
+        }
+
+        .accordion_closed {
+          &::after {
+            content: "";
+          }
+        }
+
+        .accordion_opened {
+          &::after {
+            content: "";
+          }
+        }
+
+        .footer_links_list {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+
+    .footer_social_links_header {
+      margin-bottom: .3rem;
+      margin-top: .3rem;
+    }
+  }
+}

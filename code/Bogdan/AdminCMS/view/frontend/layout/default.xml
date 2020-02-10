@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="main">
+            <block class="Bogdan\AdminCMS\Block\Banner" name="main.banner" template="Bogdan_AdminCMS::main_banner.phtml" />
+            <block class="Bogdan\AdminCMS\Block\BackgroundColor" name="banner.color" template="Bogdan_AdminCMS::banner_color.phtml" />
+            <block class="Bogdan\AdminCMS\Block\BackgroundColor" name="about.section.color" template="Bogdan_AdminCMS::about_section_color.phtml" />
+            <block class="Bogdan\AdminCMS\Block\About" name="about.section.image" template="Bogdan_AdminCMS::about_section_image.phtml" />
+        </referenceContainer>
+    </body>
+</page>
