@@ -1,23 +1,47 @@
-require([], function () {
+define(['jquery'], function ($) {
     'use strict';
-    // return function () {
-    //     _init: function () {
-    //         var value = $("#qty").val();
-    //
-    //         $('#incr').on('click', function () {
-    //             value++
-    //         });
-    //
-    //         $('#decr').on('click', function () {
-    //             value--
-    //         });
-    //     }
-    // }
-    document.getElementById('incr').addEventListener('click', function () {
-        document.getElementById('qty').value++
+    $.widget('mage.counter', {
+        options: {
+            qty: $('#qty'),
+            incr: $('#incr'),
+            decr: $('#decr')
+        },
+
+        _init: function () {
+            console.log('dasdas');
+            this._addHandlers();
+        },
+
+        _addHandlers() {
+            var options = this.options;
+            var value = options.qty.val();
+            var self = this;
+
+            options.incr.on('click', function () {
+                if(self.checkLimit()) {
+                    options.qty.val(value++);
+                }
+            });
+            options.decr.on('click', function () {
+                if(self.checkLimit()) {
+                    options.qty.val(value--);
+                }
+            });
+        },
+
+        checkLimit() {
+            return this.options.qty.val() > 1;
+        },
+
     });
 
-    document.getElementById('decr').addEventListener('click', function () {
-        document.getElementById('qty').value--
-    })
+    return $.mage.counter;
 });
+// document.getElementById('incr').addEventListener('click', function () {
+//     document.getElementById('qty').value++
+// });
+//
+// document.getElementById('decr').addEventListener('click', function () {
+//     document.getElementById('qty').value--
+// })
+// });
