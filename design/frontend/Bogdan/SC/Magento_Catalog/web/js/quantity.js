@@ -8,7 +8,6 @@ define(['jquery'], function ($) {
         },
 
         _init: function () {
-            console.log('dasdas');
             this._addHandlers();
         },
 

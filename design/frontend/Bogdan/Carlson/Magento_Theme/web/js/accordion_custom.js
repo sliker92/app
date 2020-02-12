@@ -67,7 +67,6 @@ define([
             var options = this.options;
 
             headerClass.on('click', function (element) {
-                console.log(element.target);
                 if (element.target.className === options.closedClass) {
                     element.target.className = options.openedClass
                 } else if (element.target.className === options.openedClass) {

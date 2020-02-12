@@ -8,6 +8,25 @@
 ?>
 <?php if ($detailedInfoGroup = $block->getGroupSortedChildNames('detailed_info', 'getChildHtml')) :?>
     <div class="product info detailed">
+        <div class="content_links_bar_wrapper" data-mage-init='{"Magento_Catalog/js/stickybar":{}}'>
+            <ul class="content_links_bar_list">
+                <li class="content_links_bar_item">
+                    <a href="#description" class="content_links_bar_link">Description</a>
+                </li>
+                <li class="content_links_bar_item">
+                    <a href="#specifications" class="content_links_bar_link">Specifications</a>
+                </li>
+                <li class="content_links_bar_item">
+                    <a href="#recommended" class="content_links_bar_link">Recommended</a>
+                </li>
+                <li class="content_links_bar_item">
+                    <a href="#downloads" class="content_links_bar_link">Downloads</a>
+                </li>
+            </ul>
+            <span class="content_links_bar_scroll">
+            <a href="#" class="content_links_bar_scroll_link">Back to Top</a>
+    </span>
+        </div>
         <?php $layout = $block->getLayout(); ?>
         <div class="product data items">
             <?php foreach ($detailedInfoGroup as $name) :?>
@@ -27,4 +46,6 @@
         </div>
     </div>
 <?php endif; ?>
+
+
 
