@@ -1,0 +1,34 @@
+<?php
+/** @var \Amasty\ProductAttachment\Block\Widgets\AttachmentsList $block */
+?>
+<?php if ($files = $block->getAttachments()) : ?>
+    <h2 class="tab-content-title"><?= __('Downloads'); ?></h2>
+    <div class="widget am-attachments am-attachments-<?= $block->escapeHtml($this->getWidgetType()); ?>">
+        <?= $block->getBlockTitle(); ?>
+        <?php if ($block->getBlockTitle()) : ?>
+            <div class="block-title">
+                <strong><?= $block->escapeHtml($block->getBlockTitle()); ?></strong>
+            </div>
+        <?php endif; ?>
+
+        <?php foreach ($files as $file) : ?>
+            <div class="am-fileline">
+                <?php if ($block->isShowIcon() && $file->getIconUrl()) : ?>
+                    <img src="<?= $block->escapeUrl($file->getIconUrl()) ?>" class="am-fileicon" />
+                <?php endif; ?>
+
+                <span class="am-filename">
+                    <?= $block->escapeHtml($file->getLabel()); ?>
+                </span>
+                <a href="<?= $block->escapeUrl($file->getFrontendUrl()) ?>" class="am-filelink" target="_blank">
+<!--                    todo: add format of the attached file-->
+                    Download (format)
+                </a>
+
+                <?php if ($block->isShowFilesize() && $file->getFileSize()) : ?>
+                    <span class="am-filesize">(<?= $block->escapeHtml($file->getReadableFileSize()) ?>)</span>
+                <?php endif ?>
+            </div>
+        <?php endforeach; ?>
+    </div>
+<?php endif; ?>

@@ -25,6 +25,12 @@
         display: none;
     }
 
+    //.panel.header .links, .panel.header .switcher {
+    //    display: block;
+    //    background-color: #7C8180;
+    //    position: relative;
+    //}
+
     // Menu
 
     .menu_tabs_wrapper {
@@ -51,6 +57,7 @@
         display: none;
         position: absolute;
         min-width: 90%;
+        z-index: 100;
     }
 
     .header_menu_trigger {
@@ -328,6 +335,7 @@
         .categories_block_header {
             color: #ff6700;
             width: 100%;
+            font-size: 32px;
             text-align: left;
             font-weight: bold;
         }
@@ -842,7 +850,73 @@
         }
     }
 
+    .block-search .control {
+        width: 100%;
+    }
+
     // Menu
+
+    .block-customer-login {
+        margin: 0;
+
+        .block-content {
+            background-color: #EBEBEB;
+            padding: .7rem 3rem;
+
+            .form {
+                width: fit-content;
+                margin-left: auto;
+
+                .fieldset {
+                    margin: 0;
+
+                    .email, .password, .actions-toolbar {
+                        float: left;
+                        margin-right: 1rem;
+                        margin-bottom: 0;
+                    }
+
+                    .email, .password {
+                        float: left;
+                        max-width: 165px;
+                    }
+
+                    .actions-toolbar {
+                        .primary {
+                            .action.primary {
+                                padding: 3px 19px 7px 30px;
+                                background-color: #7C8180;
+                                border-radius: 0;
+                                border-color: #7C8180;
+
+                                &:before {
+                                    content: "";
+                                    width: 16px;
+                                    height: 16px;
+                                    background: url('@{baseDir}images/man.png') no-repeat;
+                                    display: inline-block;
+                                    font-weight: 600;
+                                    //position: absolute;
+                                    transform: translateX(-10px) translateY(3px);
+                                    //right: 8.5%;
+                                }
+                            }
+                        }
+                    }
+
+                    .registartion-link {
+                        display: inline-block;
+                        line-height: 3rem;
+                        //margin-right: 3rem;
+
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     .menu_tabs_wrapper {
         display: none;
