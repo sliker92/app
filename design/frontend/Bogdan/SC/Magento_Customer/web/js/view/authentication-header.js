@@ -33,6 +33,7 @@ define([
          */
         initialize: function () {
             var self = this;
+            console.log(window.authenticationPopup);
 
             this._super();
             url.setBaseUrl(window.authenticationPopup.baseUrl);
@@ -72,6 +73,8 @@ define([
          * @return {Boolean}
          */
         login: function (formUiElement, event) {
+            var self = this;
+
             var loginData = {},
                 formElement = $(event.currentTarget),
                 formDataArray = formElement.serializeArray();
@@ -90,14 +93,14 @@ define([
 
             return false;
         },
-        
+
         /**
          * On input key press
          */
         inputKeyPress: function(d, e) {
             var input = $(e.currentTarget);
             input.removeClass('mage-error');
-            
+
             var parent = input.closest('.control');
             if (parent.length) {
                 parent.find('.mage-error').remove();

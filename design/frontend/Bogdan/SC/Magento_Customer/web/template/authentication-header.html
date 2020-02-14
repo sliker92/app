@@ -4,7 +4,7 @@
  * See COPYING.txt for license details.
  */
  -->
-<div class="block-authentication">
+<div class="block-authentication" data-bind="ifnot: isLoading">
     <div class="block block-customer-login"
          data-bind="attr: {'data-label': $t('or')}">
         <div class="block-title visually-hidden">
@@ -74,4 +74,8 @@
             </form>
         </div>
     </div>
+</div>
+
+<div class="block-authentication" data-bind="if: isLoading">
+    URAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 </div>
