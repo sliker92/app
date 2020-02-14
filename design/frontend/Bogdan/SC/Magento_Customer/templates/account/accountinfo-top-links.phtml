@@ -1,0 +1,50 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+/** @var Magento\Customer\Block\Account\Customer $block */
+?>
+<?php if ($block->customerLoggedIn()): ?>
+    <li class="customer-name"
+        role="link"
+        data-bind="scope: 'customer'"
+        tabindex="0">
+        <a href="#" class="customer-name-btn">
+            <span class="custom-name-account"><?= $block->escapeHtml(__('Account')) ?>:</span>
+            <!-- ko if: (customer().account_number)-->
+            <span>#</span>
+            <span class="customer-name-link-number" data-bind="text: customer().account_number"></span>
+            <!-- /ko -->
+            <span class="customer-name-link-name" data-bind="text: customer().fullname"></span>
+        </a>
+    </li>
+    <li class="shipto-name "
+        data-bind="scope: 'customer'">
+        <!-- ko if: (customer().account_number)-->
+            <a href="#" class="customer-shipto-btn"
+               role="link"
+               tabindex="0">
+                <span class="custom-name-account"><?= $block->escapeHtml(__('Ship To')) ?>:</span>
+                <span class="shipto-city" data-bind="text: customer().shipto_city"></span>
+                <span class="shipto-postcode" data-bind="text: customer().shipto_post"></span>
+            </a>
+        <!-- /ko -->
+    </li>
+        <script type="text/x-magento-init">
+        {
+            "*": {
+                "Magento_Ui/js/core/app": {
+                    "components": {
+                        "customer": {
+                            "component": "Magento_Customer/js/view/customer"
+                        }
+                    }
+                }
+            }
+        }
+
+        </script>
+<?php endif; ?>

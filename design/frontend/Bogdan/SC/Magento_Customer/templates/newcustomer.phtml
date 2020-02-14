@@ -1,0 +1,32 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var \Magento\Customer\Block\Form\Login\Info $block */
+?>
+<?php
+$helper = $this->helper('BlueAcorn\Core\Helper\Data');
+$messageCmsBlock = $helper->getCmsBlockFromConfig('login/onboarding/new');
+?>
+
+<?php if ($block->getRegistration()->isAllowed()): ?>
+    <div class="block block-new-customer">
+        <div class="block-title">
+            <strong id="block-new-customer-heading" role="heading" aria-level="2"><?= $block->escapeHtml(__('New Customers')) ?></strong>
+        </div>
+        <div class="block-content" aria-labelledby="block-new-customer-heading">
+            <?php if($messageCmsBlock): ?>
+                <div class="login-page-message"><?php echo $messageCmsBlock; ?></div>
+            <?php endif; ?>
+            <div class="actions-toolbar">
+                <div class="primary">
+                    <a href="<?= $block->escapeUrl($block->getCreateAccountUrl()) ?>" class="button primary"><span><?= $block->escapeHtml(__('Register as a New customer')) ?></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php endif; ?>
