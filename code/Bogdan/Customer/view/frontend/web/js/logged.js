@@ -1,13 +1,16 @@
 define([
     'uiComponent',
-    'Magento_Customer/js/model/customer',
-    'ko'
-], function (Component, customer, ko) {
+    'ko',
+], function (Component, ko) {
     'use strict';
 
     return Component.extend({
         isLoggedIn: function () {
-            return JSON.parse(localStorage.getItem('mage-cache-storage')).customer
+            return this.getCustomer();
+        },
+
+        getCustomer() {
+            return JSON.parse(localStorage.getItem('mage-cache-storage')).customer;
         }
     });
 });

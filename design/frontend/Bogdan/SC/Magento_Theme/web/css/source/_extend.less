@@ -838,6 +838,59 @@
         margin: 0;
     }
 
+    .header_login_information_wrapper {
+        display: flex;
+        justify-content: space-evenly;
+            .header_login_block {
+                .header_login_link_description, .header_login_block_link {
+                    margin-right: 3rem;
+                    .header_login_block_link {
+                        margin-right: 3rem;
+                    }
+                }
+            }
+    }
+
+    .link_globus::before {
+        content: "";
+        width: 16px;
+        height: 16px;
+        background: url('@{baseDir}images/globus.png') no-repeat;
+        display: inline-block;
+        font-weight: 600;
+        transform: translateX(-8px) translateY(3px);
+    }
+
+    .link_location::before {
+        content: "";
+        width: 16px;
+        height: 16px;
+        background: url('@{baseDir}images/location.png') no-repeat;
+        display: inline-block;
+        font-weight: 600;
+        transform: translateX(1px) translateY(3px);
+    }
+
+    .link_favorites::before {
+        content: "";
+        width: 18px;
+        height: 16px;
+        background: url('@{baseDir}images/favorites.png') no-repeat;
+        display: inline-block;
+        font-weight: 600;
+        transform: translateX(-8px) translateY(3px);
+    }
+
+    .link_account::before {
+        content: "";
+        width: 16px;
+        height: 16px;
+        background: url('@{baseDir}images/man_gray.png') no-repeat;
+        display: inline-block;
+        font-weight: 600;
+        transform: translateX(-8px) translateY(3px);
+    }
+
     .header_nav_list {
         display: flex;
         justify-content: flex-end;

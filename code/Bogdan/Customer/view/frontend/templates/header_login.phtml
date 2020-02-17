@@ -53,7 +53,7 @@
                 <?= $block->getChildHtml('form_additional_info') ?>
                 <div class="actions-toolbar">
                     <div class="primary">
-                        <button data-bind="click: auth()" type="submit" class="action login primary" name="send" id="send2">
+                        <button type="submit" class="action login primary" name="send" id="send2">
                             <span><?= $block->escapeHtml(__('LOG IN')) ?></span></button>
                     </div>
                 </div>
@@ -67,7 +67,30 @@
     <!-- /ko -->
 
     <!-- ko if: isLoggedIn() -->
-    <div>You are logged in</div>
+    <div class="block-content header_login_information_wrapper">
+        <div class="header_login_block" >
+            <a href="#" class="header_login_block_link link_globus">Eng</a>
+            <span class="header_login_link_description link_location">
+                Your Store:
+                <a href="#" class="header_login_block_link">Charleston</a>
+            </span>
+        </div>
+        <div class="header_login_block">
+                        <span class="header_login_link_description">
+                Account:
+                <a href="#" class="header_login_block_link"># 8675309 Seymour Project</a>
+            </span>
+            <span class="header_login_link_description">
+                Ship To::
+                <a href="#" class="header_login_block_link">Charleston, 29412</a>
+            </span>
+        </div>
+
+        <div class="header_login_block">
+            <a href="#" class="header_login_block_link link_favorites">Favorites</a>
+            <a href="#" class="header_login_block_link link_account">My Account</a>
+        </div>
+    </div>
     <!-- /ko -->
 </div>
 
