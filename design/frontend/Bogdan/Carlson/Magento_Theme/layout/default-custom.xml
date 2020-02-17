@@ -1,44 +1,7 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-<!--        <referenceContainer name="header.container">-->
-<!--            <referenceBlock name="logo">-->
-<!--                <arguments>-->
-<!--                    <argument name="logo_file" xsi:type="string">images/logo.png</argument>-->
-<!--                    <argument name="logo_img_width" xsi:type="number">273</argument>-->
-<!--                    <argument name="logo_img_height" xsi:type="number">50</argument>-->
-<!--                </arguments>-->
-<!--            </referenceBlock>-->
-<!--            <block name="header.navigation.desktop" template="Magento_Theme::header_navigation_desktop.phtml" before="-"/>-->
-<!--                <block name="menu.header" template="Magento_Theme::header_menu.phtml" after="-"/>-->
-<!--        </referenceContainer>-->
-<!--        <referenceContainer name="header-wrapper">-->
-<!--            <block name="header.cart_phone" template="Magento_Theme::header_phone.phtml" after="top.search"/>-->
-<!--            <block name="header_banner" template="Magento_Theme::header_banner.phtml" after="-" />-->
-<!--        </referenceContainer>-->
-<!--        <referenceContainer name="main">-->
-<!--            <block name="banners.section" template="Magento_Theme::banners_section.phtml" after="-" />-->
-<!--            <container name="products.section" htmlTag="section" htmlClass="products_section" as="products_section"-->
-<!--                       label="Products Section" after="-">-->
-<!--                <block name="categories.block" template="Magento_Theme::categories_block.phtml" after="-"/>-->
-<!--            </container>-->
-<!--            <block name="about.section" template="Magento_Theme::about_section.phtml" after="-" />-->
-<!--        </referenceContainer>-->
-<!--        <referenceContainer name="content">-->
-<!--            <block name="main_content"  template="Magento_Theme::main_content.phtml" before="-"/>-->
-<!--        </referenceContainer>-->
-
-<!--        <referenceContainer name="page.bottom">-->
-<!--            <block name="main_sailing" template="Magento_Theme::main_sailing.phtml" after="-" />-->
-<!--        </referenceContainer>-->
-<!--        <referenceContainer name="footer">-->
-<!--            <block name="footer_info" template="Magento_Theme::footer_info.phtml" before="-" />-->
-<!--            <block name="footer_navigation" template="Magento_Theme::footer_navigation.phtml" after="-" />-->
-<!--            <block name="footer_copyright" template="Magento_Theme::footer_copyright.phtml" after="-" />-->
-<!--        </referenceContainer>-->
         <referenceContainer name="header.panel" remove="true"/>
-<!--        <referenceBlock name="form.subscribe" remove="true"/>-->
-<!--        <referenceBlock name="footer_links" remove="true"/>-->
         <referenceBlock name="report.bugs" remove="true"/>
         <referenceBlock name="copyright" remove="true"/>
     </body>

@@ -1,10 +1,4 @@
 <?xml version="1.0"?>
-<!--
-/**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
--->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceBlock name="product.info.sku">
@@ -35,21 +29,5 @@
                 <argument name="at_label" xsi:type="string">Description</argument>
             </arguments>
         </referenceBlock>
-
-<!--        <referenceBlock name="product.info.details">-->
-<!--            <block class="Magento\Catalog\Block\Product\View" name="upsell.tab" as="upselltab" template="Magento_Catalog::product/upsell-products.phtml" group="detailed_info" >-->
-<!--                <arguments>-->
-<!--                    <argument translate="true" name="title" xsi:type="string">Recommended</argument>-->
-<!--                </arguments>-->
-<!--            </block>-->
-<!--        </referenceBlock>-->
-
-<!--        <referenceBlock name="product.info.details">-->
-<!--            <block class="Magento\Catalog\Block\Product\View" name="related.products.tab" as="relatedproductstab" template="Magento_Catalog::product/related-products.phtml" group="detailed_info" >-->
-<!--                <arguments>-->
-<!--                    <argument translate="true" name="title" xsi:type="string">Related Products</argument>-->
-<!--                </arguments>-->
-<!--            </block>-->
-<!--        </referenceBlock>-->
     </body>
 </page>

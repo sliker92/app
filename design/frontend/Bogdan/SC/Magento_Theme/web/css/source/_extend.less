@@ -1,3 +1,9 @@
+@color-orange-primary: #FF6700;
+@color-darkblue-primary: #1B272F;
+@color-middlegray: #7C8180;
+@color-green-text: #1c7505;
+
+
 & when (@media-common = true) {
 
     h1 {
@@ -25,11 +31,9 @@
         display: none;
     }
 
-    //.panel.header .links, .panel.header .switcher {
-    //    display: block;
-    //    background-color: #7C8180;
-    //    position: relative;
-    //}
+    .block-customer-login {
+        display: none;
+    }
 
     // Menu
 
@@ -43,7 +47,7 @@
             display: block;
             padding: .5rem 2rem;
             font-weight: 600;
-            color: black;
+            color: @color-black;
             border-right: 1px solid black;
             background-color: @color-gray-darken1;
         }
@@ -333,7 +337,7 @@
         margin: 2rem 1.5rem 4rem 1.5rem;
 
         .categories_block_header {
-            color: #ff6700;
+            color: @color-orange-primary;
             width: 100%;
             font-size: 32px;
             text-align: left;
@@ -467,11 +471,11 @@
     }
 
     .footer_copyright_link {
-        color: #ff6700;
+        color: @color-orange-primary;
         padding-right: 3rem;
 
         &:visited, .alink:visited {
-            color: #ff6700;
+            color: @color-orange-primary;
             text-decoration: none;
         }
     }
@@ -551,7 +555,7 @@
 
     .block-title strong {
         font-size: ceil(@font-size__base * 2);
-        color: #ff6700;
+        color: @color-orange-primary;
     }
 
     .price-container .price {
@@ -588,7 +592,7 @@
     }
 
     .count_text__green {
-        color: #1c7505;
+        color: @color-green-text;
         font-weight: bold;
     }
 
@@ -601,7 +605,7 @@
     .count_text__green:before {
         content: '\2713';
         display: inline-block;
-        color: #1c7505;
+        color: @color-green-text;
         font-size: 20px;
         line-height: 30px;
     }
@@ -857,6 +861,7 @@
     // Menu
 
     .block-customer-login {
+        display: block;
         margin: 0;
 
         .block-content {
@@ -885,9 +890,9 @@
                         .primary {
                             .action.primary {
                                 padding: 3px 19px 7px 30px;
-                                background-color: #7C8180;
+                                background-color: @color-middlegray;
                                 border-radius: 0;
-                                border-color: #7C8180;
+                                border-color: @color-middlegray;
 
                                 &:before {
                                     content: "";
@@ -896,9 +901,7 @@
                                     background: url('@{baseDir}images/man.png') no-repeat;
                                     display: inline-block;
                                     font-weight: 600;
-                                    //position: absolute;
                                     transform: translateX(-10px) translateY(3px);
-                                    //right: 8.5%;
                                 }
                             }
                         }
@@ -907,7 +910,6 @@
                     .registartion-link {
                         display: inline-block;
                         line-height: 3rem;
-                        //margin-right: 3rem;
 
                         &:hover {
                             text-decoration: none;
@@ -1056,7 +1058,7 @@
     // Footer
 
     .footer.content {
-        padding: 5rem 5rem 0 5rem;
+        padding: 5rem 5rem 1rem 5rem;
     }
 
     .footer_info_wrapper {

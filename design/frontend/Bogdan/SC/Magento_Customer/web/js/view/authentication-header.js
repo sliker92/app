@@ -33,7 +33,6 @@ define([
          */
         initialize: function () {
             var self = this;
-            console.log(window.authenticationPopup);
 
             this._super();
             url.setBaseUrl(window.authenticationPopup.baseUrl);

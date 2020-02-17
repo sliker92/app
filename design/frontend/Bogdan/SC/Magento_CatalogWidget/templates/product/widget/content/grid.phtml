@@ -53,11 +53,6 @@ use Magento\Framework\App\Action\Action;
                                 <?php if ($templateType) : ?>
                                     <?= $block->getReviewsSummaryHtml($_item, $templateType) ?>
                                 <?php endif; ?>
-
-<!--                                Custom-->
-
-
-
                                 <div class="product_price_wrapper" style="display: flex; align-items: baseline;">
                                     <?= $block->escapeHtml(__('from')) ?>
                                 <?= $block->getProductPriceHtml($_item, $type) ?>

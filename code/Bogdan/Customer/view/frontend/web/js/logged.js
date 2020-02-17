@@ -6,10 +6,6 @@ define([
     'use strict';
 
     return Component.extend({
-        default: {
-
-        }
-
         isLoggedIn: function () {
             return JSON.parse(localStorage.getItem('mage-cache-storage')).customer
         }
