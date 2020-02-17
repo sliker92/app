@@ -17,7 +17,7 @@ define(['jquery'], function ($) {
             var self = this;
 
             options.incr.on('click', function () {
-                if(self.checkLimit()) {
+                if(self .checkLimit()) {
                     options.qty.val(value++);
                 }
             });
@@ -36,11 +36,3 @@ define(['jquery'], function ($) {
 
     return $.mage.counter;
 });
-// document.getElementById('incr').addEventListener('click', function () {
-//     document.getElementById('qty').value++
-// });
-//
-// document.getElementById('decr').addEventListener('click', function () {
-//     document.getElementById('qty').value--
-// })
-// });
