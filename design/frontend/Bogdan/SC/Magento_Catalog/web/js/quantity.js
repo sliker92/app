@@ -13,23 +13,22 @@ define(['jquery'], function ($) {
 
         _addHandlers() {
             var options = this.options;
-            var value = options.qty.val();
             var self = this;
 
             options.incr.on('click', function () {
-                if(self .checkLimit()) {
-                    options.qty.val(value++);
+                if(self.checkLimit()) {
+                    document.getElementById('qty').value++
                 }
             });
             options.decr.on('click', function () {
                 if(self.checkLimit()) {
-                    options.qty.val(value--);
+                    document.getElementById('qty').value--
                 }
             });
         },
 
         checkLimit() {
-            return this.options.qty.val() > 1;
+            return this.options.qty.val() >= 1;
         },
 
     });
