@@ -80,9 +80,9 @@ define(
             addCalendar: function() {
                 var self = this;
 
-                $(self.options.calendarEl).calendar({
+                $(this.options.calendarEl).calendar({
                     changeMonth: true,
-                    changeYear: true,
+                    changeYear: false,
                     showButtonPanel: true,
                     currentText: $t('Go Today'),
                     closeText: $t('Close'),
