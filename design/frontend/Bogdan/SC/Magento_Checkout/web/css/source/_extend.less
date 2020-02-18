@@ -23,11 +23,37 @@
     .minicart-wrapper {
         padding: 1rem;
     }
+
+    .opc-wrapper .shipping-address-item {
+        display: table;
+    }
+
+    .form-delivery {
+        display: flex;
+        align-items: center;
+        margin-left: 2%;
+
+        .field {
+            margin-right: .3rem;
+        }
+    }
+
+    .opc-progress-bar {
+        margin: 2rem 0;
+    }
+
+    .input-text {
+        width: auto;
+    }
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     .minicart-wrapper {
         padding: .5rem 1rem;
+    }
+
+    .opc-progress-bar {
+        margin: 2rem 0;
     }
 }
 
@@ -47,5 +73,9 @@
         overflow: hidden;
         speak: none;
         text-align: center;
+    }
+
+    .opc-progress-bar {
+        margin: 2rem 0;
     }
 }

@@ -5,12 +5,11 @@
          class="step-content"
          data-role="content">
 
-        <div class="field">
-            <label>Date : </label>
-            <input type="text" class="input-text" id="example-date" style="width: auto" name="example-date" />
-        </div>
-
-        <form data-bind="submit: navigateToNextStep" novalidate="novalidate">
+        <form class="form form-delivery" data-bind="submit: navigateToNextStep">
+            <div class="field">
+                <label>Date: </label>
+                <input type="text" class="input-text" id="input-date" name="date"/>
+            </div>
 
             <div class="actions-toolbar">
                 <div class="primary">

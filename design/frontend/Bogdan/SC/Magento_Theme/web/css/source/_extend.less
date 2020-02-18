@@ -1,10 +1,13 @@
-@color-orange-primary: #FF6700;
-@color-darkblue-primary: #1B272F;
-@color-middlegray: #7C8180;
-@color-green-text: #1c7505;
-
+@import "varibales/_variables.less";
 
 & when (@media-common = true) {
+
+    .primary {
+        border-left: 2px solid @color-darkgray;
+        &:hover {
+            border-left: 2px solid @color-middlegray;
+        }
+    }
 
     h1 {
         margin: 0;

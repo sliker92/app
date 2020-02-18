@@ -17,13 +17,11 @@ define(
         $t
     ) {
         'use strict';
-        /**
-         *
-         * mystep - is the name of the component's .html template,
-         * <Vendor>_<Module>  - is the name of the your module directory.
-         *
-         */
+
         return Component.extend({
+            options: {
+                calendarEl: '#input-date'
+            },
             defaults: {
                 template: 'Bogdan_Checkout/checkout_step'
             },
@@ -59,14 +57,7 @@ define(
                     15
                 );
 
-                $('#example-date').calendar({
-                    changeMonth: true,
-                    changeYear: true,
-                    showButtonPanel: true,
-                    currentText: $t('Go Today'),
-                    closeText: $t('Close'),
-                    showWeek: true
-                });
+
 
                 return this;
             },
@@ -78,15 +69,32 @@ define(
              * When the user navigates to the custom step via url anchor or back button we_must show step manually here
              */
             navigate: function () {
-
+                this.addCalendar();
                 this.isVisible(true);
+            },
+
+            /**
+             * @returns calendar element
+             */
+
+            addCalendar: function() {
+                var self = this;
+
+                $(self.options.calendarEl).calendar({
+                    changeMonth: true,
+                    changeYear: true,
+                    showButtonPanel: true,
+                    currentText: $t('Go Today'),
+                    closeText: $t('Close'),
+                    showWeek: true
+                });
             },
 
             /**
              * @returns void
              */
-            navigateToNextStep: function () {
-                stepNavigator.next();
+            navigateToNextStep: function (el) {
+                stepNavigator.next(el);
             }
         });
     }
